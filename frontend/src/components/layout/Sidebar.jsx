@@ -6,28 +6,34 @@ import {
   ShoppingCart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
 
 const menuItems = [
   {
     title: "Dashboard",
     icon: LayoutDashboard,
-    active: true,
+    href: "/",
+    end: true,
   },
   {
     title: "Portfolio",
     icon: BriefcaseBusiness,
+    href: "/portfolio",
   },
   {
     title: "Market",
     icon: CandlestickChart,
+    href: "/market",
   },
   {
     title: "Orders",
     icon: ShoppingCart,
+    href: "/orders",
   },
 ];
 
 const Sidebar = () => {
+  const pathName = window.location.pathname;
   return (
     <aside className="w-full border-b border-white/10 bg-slate-950/85 px-4 py-4 backdrop-blur-xl lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:border-r lg:border-b-0 lg:px-5 lg:py-6">
       <div className="flex items-center justify-between lg:flex-col lg:items-start">
@@ -51,19 +57,36 @@ const Sidebar = () => {
           const Icon = item.icon;
 
           return (
-            <button
+            <NavLink
               key={item.title}
-              type="button"
-              className={cn(
-                "flex min-w-fit items-center gap-3 rounded-2xl border px-4 py-3 text-left text-sm transition lg:w-full",
-                item.active
-                  ? "border-cyan-400/30 bg-cyan-400/15 text-white shadow-[0_0_0_1px_rgba(34,211,238,0.06)]"
-                  : "border-white/8 bg-white/4 text-slate-300 hover:border-white/16 hover:bg-white/8 hover:text-white"
-              )}
+              to={item.href}
+              end={item.end}
+              className={({ isActive }) =>
+                cn(
+                  "flex min-w-fit items-center gap-3 rounded-2xl border px-4 py-3 text-left text-sm transition lg:w-full",
+                  isActive
+                    ? "border-cyan-400/30 bg-cyan-400/15 text-white shadow-[0_0_0_1px_rgba(34,211,238,0.06)]"
+                    : "border-white/8 bg-white/4 text-slate-300 hover:border-white/16 hover:bg-white/8 hover:text-white"
+                )
+              }
             >
               <Icon size={18} />
               <span>{item.title}</span>
-            </button>
+            </NavLink>
+
+            // <button
+            //   key={item.title}
+            //   type="button"
+            //   className={cn(
+            //     "flex min-w-fit items-center gap-3 rounded-2xl border px-4 py-3 text-left text-sm transition lg:w-full",
+            //     pathName === item.href
+            //       ? "border-cyan-400/30 bg-cyan-400/15 text-white shadow-[0_0_0_1px_rgba(34,211,238,0.06)]"
+            //       : "border-white/8 bg-white/4 text-slate-300 hover:border-white/16 hover:bg-white/8 hover:text-white"
+            //   )}
+            // >
+            //   <Icon size={18} />
+            //   <span>{item.title}</span>
+            // </button>
           );
         })}
       </div>

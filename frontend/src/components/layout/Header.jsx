@@ -3,6 +3,26 @@ import { Button } from "@/components/ui/button";
 import { formatDateTime } from "@/lib/formatters";
 import { RefreshCw, ShieldCheck } from "lucide-react";
 import { useIbkr } from "../../hooks/useIbkr";
+import { useLocation } from "react-router-dom";
+
+const pageMeta = {
+  "/": {
+    title: "Trading dashboard",
+    description: "Account metrics and live account health.",
+  },
+  "/portfolio": {
+    title: "Portfolio",
+    description: "Allocation, concentration, and holdings breakdown.",
+  },
+  "/market": {
+    title: "Market",
+    description: "Reserved for market data and watchlists.",
+  },
+  "/orders": {
+    title: "Orders",
+    description: "Reserved for order entry and execution history.",
+  },
+};
 
 const Header = () => {
   const {
@@ -11,16 +31,20 @@ const Header = () => {
     refreshDashboard,
     refreshing,
   } = useIbkr();
+  const location = useLocation();
+  const currentPage =
+    pageMeta[location.pathname] ||
+    pageMeta["/"];
 
   return (
     <header className="sticky top-0 z-20 border-b border-white/10 bg-slate-950/70 px-4 py-4 backdrop-blur-xl sm:px-6 lg:px-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h2 className="text-xl font-semibold text-white sm:text-2xl">
-            Trading dashboard
+            {currentPage.title}
           </h2>
           <p className="mt-1 text-sm text-slate-400">
-            Last sync {formatDateTime(lastUpdated)}
+            {currentPage.description} Last sync {formatDateTime(lastUpdated)}
           </p>
         </div>
 
@@ -44,7 +68,7 @@ const Header = () => {
             variant="outline"
             onClick={() => refreshDashboard()}
             disabled={refreshing}
-            className="h-8 rounded-full border-white/12 bg-white/4 px-3 text-slate-100 hover:bg-white/10 hover:text-white"
+            className="h-8 rounded-full border-white/12 bg-white/4 px-3 text-slate-100 hover:bg-white/10 hover:text-white cursor-pointer data-[state=open]:bg-white/10"
           >
             <RefreshCw
               className={`mr-2 size-3.5 ${refreshing ? "animate-spin" : ""}`}

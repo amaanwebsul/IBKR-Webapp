@@ -3,6 +3,7 @@ import { getPositions, getStatus, placeTestOrder } from "../controllers/ibkrCont
 
 const router = express.Router();
 
+// router.get("/confirm-status", confirmStatus);
 router.get("/status", getStatus);
 router.get("/positions", getPositions);
 
