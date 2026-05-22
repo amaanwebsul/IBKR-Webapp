@@ -5,6 +5,7 @@ import {
   formatCompactCurrency,
   formatCurrency,
   formatNumber,
+  getMoneyCurrency,
 } from "@/lib/formatters";
 import { cn } from "@/lib/utils";
 import { useIbkr } from "@/hooks/useIbkr";
@@ -51,6 +52,12 @@ const Portfolio = () => {
   } = useIbkr();
 
   const metrics = dashboardData?.metrics || {};
+  const accountCurrency =
+    dashboardData?.currency ||
+    getMoneyCurrency(
+      metrics.netLiquidation,
+      "USD"
+    );
   const totalExposure = positions.reduce(
     (sum, item) =>
       sum +
@@ -111,7 +118,8 @@ const Portfolio = () => {
                 <p className="text-sm text-slate-400">Net liquidation</p>
                 <p className="mt-2 text-2xl font-semibold text-white">
                   {formatCompactCurrency(
-                    metrics.netLiquidation
+                    metrics.netLiquidation,
+                    accountCurrency
                   )}
                 </p>
               </div>
@@ -119,7 +127,8 @@ const Portfolio = () => {
                 <p className="text-sm text-slate-400">Total exposure</p>
                 <p className="mt-2 text-2xl font-semibold text-white">
                   {formatCompactCurrency(
-                    totalExposure
+                    totalExposure,
+                    accountCurrency
                   )}
                 </p>
               </div>
@@ -157,7 +166,11 @@ const Portfolio = () => {
                     : "text-rose-300"
                 )}
               >
-                {formatCurrency(totalPnL, "USD", 2)}
+                {formatCurrency(
+                  totalPnL,
+                  accountCurrency,
+                  2
+                )}
               </p>
             </div>
           </div>
@@ -200,7 +213,10 @@ const Portfolio = () => {
                       </p>
                       <div className="text-right">
                         <p className="text-sm font-medium text-white">
-                          {formatCurrency(item.value)}
+                          {formatCurrency(
+                            item.value,
+                            accountCurrency
+                          )}
                         </p>
                         <p className="text-xs text-slate-400">
                           {formatNumber(item.share, 1)}%
@@ -261,7 +277,8 @@ const Portfolio = () => {
                     </p>
                     <p className="mt-2 text-xl font-semibold text-white">
                       {formatCompactCurrency(
-                        item.value
+                        item.value,
+                        accountCurrency
                       )}
                     </p>
                     <p className="mt-1 text-xs text-slate-400">

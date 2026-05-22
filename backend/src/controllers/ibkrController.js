@@ -50,26 +50,51 @@ export const getStatus = async (req, res) => {
     );
 
     const data = response.data;
+    const accountCurrency =
+      data?.netliquidation?.currency ||
+      data?.availablefunds?.currency ||
+      data?.buyingpower?.currency ||
+      "USD";
 
     const dashboardData = {
       connected: true,
       accountId: process.env.IBKR_ACCOUNT_ID,
+      currency: accountCurrency,
 
       metrics: {
-        netLiquidation:
-          data?.netliquidation?.amount ?? 0,
+        netLiquidation: {
+          amount: data?.netliquidation?.amount ?? 0,
+          currency:
+            data?.netliquidation?.currency ??
+            accountCurrency,
+        },
+        buyingPower: {
+          amount: data?.buyingpower?.amount ?? 0,
+          currency:
+            data?.buyingpower?.currency ??
+            accountCurrency,
+        },
 
-        buyingPower:
-          data?.buyingpower?.amount ?? 0,
+        availableFunds: {
+          amount: data?.availablefunds?.amount ?? 0,
+          currency:
+            data?.availablefunds?.currency ??
+            accountCurrency,
+        },
 
-        availableFunds:
-          data?.availablefunds?.amount ?? 0,
+        totalCashValue: {
+          amount: data?.totalcashvalue?.amount ?? 0,
+          currency:
+            data?.totalcashvalue?.currency ??
+            accountCurrency,
+        },
 
-        totalCashValue:
-          data?.totalcashvalue?.amount ?? 0,
-
-        equityWithLoanValue:
-          data?.equitywithloanvalue?.amount ?? 0,
+        equityWithLoanValue: {
+          amount: data?.equitywithloanvalue?.amount ?? 0,
+          currency:
+            data?.equitywithloanvalue?.currency ??
+            accountCurrency,
+        },
 
         accountReady:
           data?.accountready?.value === "true",
@@ -80,6 +105,7 @@ export const getStatus = async (req, res) => {
     };
 
     return res.status(200).json(dashboardData);
+    // return res.status(200).json(data);
   } catch (error) {
     console.error(error?.response?.data || error);
 

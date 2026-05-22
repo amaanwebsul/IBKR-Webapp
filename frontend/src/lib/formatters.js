@@ -1,9 +1,41 @@
+export const getMoneyAmount = (
+  value
+) => {
+  if (
+    value &&
+    typeof value === "object" &&
+    "amount" in value
+  ) {
+    return Number(value.amount);
+  }
+
+  return Number(value);
+};
+
+export const getMoneyCurrency = (
+  value,
+  fallback = "USD"
+) => {
+  if (
+    value &&
+    typeof value === "object" &&
+    typeof value.currency === "string" &&
+    value.currency
+  ) {
+    return value.currency;
+  }
+
+  return fallback;
+};
+
 export const formatCurrency = (
   value,
   currency = "USD",
   maximumFractionDigits = 0
 ) => {
-  const amount = Number(value);
+  const amount = getMoneyAmount(value);
+  const resolvedCurrency =
+    getMoneyCurrency(value, currency);
 
   if (!Number.isFinite(amount)) {
     return "--";
@@ -11,7 +43,7 @@ export const formatCurrency = (
 
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency,
+    currency: resolvedCurrency,
     maximumFractionDigits,
   }).format(amount);
 };
@@ -35,7 +67,9 @@ export const formatCompactCurrency = (
   value,
   currency = "USD"
 ) => {
-  const amount = Number(value);
+  const amount = getMoneyAmount(value);
+  const resolvedCurrency =
+    getMoneyCurrency(value, currency);
 
   if (!Number.isFinite(amount)) {
     return "--";
@@ -43,7 +77,7 @@ export const formatCompactCurrency = (
 
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency,
+    currency: resolvedCurrency,
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(amount);

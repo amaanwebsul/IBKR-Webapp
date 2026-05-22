@@ -11,6 +11,7 @@ import { useIbkr } from "../hooks/useIbkr";
 import {
   formatCompactCurrency,
   formatCurrency,
+  getMoneyCurrency,
 } from "@/lib/formatters";
 
 const Dashboard = () => {
@@ -30,6 +31,12 @@ const Dashboard = () => {
   }
 
   const metrics = dashboardData?.metrics || {};
+  const accountCurrency =
+    dashboardData?.currency ||
+    getMoneyCurrency(
+      metrics.netLiquidation,
+      "USD"
+    );
   const accountHealth = dashboardData?.connected
     ? metrics.accountReady
       ? "Account ready"
@@ -39,26 +46,38 @@ const Dashboard = () => {
   const overviewItems = [
     {
       title: "Net liquidation",
-      value: formatCurrency(metrics.netLiquidation),
+      value: formatCurrency(
+        metrics.netLiquidation,
+        accountCurrency
+      ),
       subtitle: "Total account value",
       icon: Landmark,
       tone: "accent",
     },
     {
       title: "Buying power",
-      value: formatCurrency(metrics.buyingPower),
+      value: formatCurrency(
+        metrics.buyingPower,
+        accountCurrency
+      ),
       subtitle: "Deployable capital",
       icon: BadgeDollarSign,
     },
     {
       title: "Available funds",
-      value: formatCurrency(metrics.availableFunds),
+      value: formatCurrency(
+        metrics.availableFunds,
+        accountCurrency
+      ),
       subtitle: "Immediate liquidity",
       icon: Wallet,
     },
     {
       title: "Cash value",
-      value: formatCurrency(metrics.totalCashValue),
+      value: formatCurrency(
+        metrics.totalCashValue,
+        accountCurrency
+      ),
       subtitle: "Uninvested balance",
       icon: Activity,
     },
@@ -86,7 +105,10 @@ const Dashboard = () => {
               <div className="rounded-3xl border border-white/10 bg-slate-950/55 p-4">
                 <p className="text-sm text-slate-400">Portfolio value</p>
                 <p className="mt-2 text-2xl font-semibold text-white">
-                  {formatCompactCurrency(metrics.netLiquidation)}
+                  {formatCompactCurrency(
+                    metrics.netLiquidation,
+                    accountCurrency
+                  )}
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-slate-950/55 p-4">
@@ -116,6 +138,13 @@ const Dashboard = () => {
               <p className="text-sm text-slate-400">Account type</p>
               <p className="mt-2 text-lg font-medium text-white">
                 {metrics.accountType || "--"}
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white/5 p-4">
+              <p className="text-sm text-slate-400">Account currency</p>
+              <p className="mt-2 text-lg font-medium text-white">
+                {accountCurrency}
               </p>
             </div>
 
