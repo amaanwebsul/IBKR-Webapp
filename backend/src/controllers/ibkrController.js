@@ -1,5 +1,48 @@
 import ibkrApi from "../services/ibkrService.js";
 
+const ensureBrokerageSession = async () => {
+  await ibkrApi.get("/sso/validate");
+
+  const initResponse = await ibkrApi.post(
+    "/iserver/auth/ssodh/init",
+    {
+      publish: true,
+      compete: true,
+    }
+  );
+
+  const accountsResponse = await ibkrApi.get("/iserver/accounts");
+
+  return {
+    init: initResponse.data,
+    accounts: accountsResponse.data,
+  };
+};
+
+export const confirmStatus = async(req, res) => {
+  try {
+    const response = await ibkrApi.get(
+      `/iserver/auth/status`
+    );
+    const data = response.data;
+
+    return res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (error) {
+    console.error(error?.response?.data || error);
+
+    return res.status(500).json({
+      connected: false,
+      error:
+        error?.response?.data ||
+        error?.message ||
+        "Something went wrong",
+    });
+  }
+}
+
 export const getStatus = async (req, res) => {
   try {
     const response = await ibkrApi.get(
@@ -141,3 +184,56 @@ export const placeTestOrder = async (
     });
   }
 };
+
+export const getMarketData = async(req, res) => {
+  try {
+    const conids =
+      req.query.conids || "265598,8314";
+    const fields =
+      req.query.fields || "31,55,84,86";
+
+    if (!conids) {
+      return res.status(400).json({
+        success: false,
+        error:
+          "Query param 'conids' is required.",
+      });
+    }
+
+    await ensureBrokerageSession();
+
+    const response = await ibkrApi.get(
+      `/iserver/marketdata/snapshot?conids=${conids}&fields=${fields}`
+    );
+
+    return res.status(200).json({
+      success: true,
+      data: response.data,
+    });
+  } catch (error) {
+    console.error(error?.response?.data || error);
+
+    const ibkrError =
+      error?.response?.data ||
+      error?.message;
+    const isNoBridgeError =
+      typeof ibkrError?.error ===
+        "string" &&
+      ibkrError.error
+        .toLowerCase()
+        .includes("no bridge");
+
+    return res.status(
+      isNoBridgeError ? 502 : 500
+    ).json({
+      success: false,
+      error: isNoBridgeError
+        ? {
+            message:
+              "IBKR brokerage session is not initialized. Log in to Client Portal Gateway, confirm the session is authenticated, and make sure /iserver/accounts succeeds before requesting market data.",
+            details: ibkrError,
+          }
+        : ibkrError,
+    });
+  }
+}
