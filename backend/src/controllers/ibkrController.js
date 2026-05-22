@@ -1,5 +1,142 @@
 import ibkrApi from "../services/ibkrService.js";
 
+const DEFAULT_MARKET_FIELDS = [
+  "31",
+  "55",
+  "84",
+  "86",
+];
+
+const MARKET_FIELD_LABELS = {
+  "31": "Last price",
+  "55": "Symbol",
+  "84": "Bid",
+  "86": "Ask",
+};
+
+const toNumberOrNull = (value) => {
+  const amount = Number(value);
+
+  return Number.isFinite(amount)
+    ? amount
+    : null;
+};
+
+const parseCsvParam = (value) =>
+  String(value || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const normalizeMarketSnapshot = (
+  row,
+  requestedFields
+) => {
+  const fieldMap = requestedFields.reduce(
+    (acc, field) => {
+      acc[field] =
+        row?.[field] ?? null;
+      return acc;
+    },
+    {}
+  );
+
+  return {
+    conid:
+      row?.conidEx ||
+      row?.conid ||
+      null,
+    symbol:
+      row?.["55"] ||
+      row?.symbol ||
+      null,
+    lastPrice:
+      toNumberOrNull(row?.["31"]),
+    bidPrice:
+      toNumberOrNull(row?.["84"]),
+    askPrice:
+      toNumberOrNull(row?.["86"]),
+    updated:
+      row?._updated || null,
+    rawFields: fieldMap,
+  };
+};
+
+const getStockSummary = async(symbol) => {
+  return await ibkrApi.get(
+    `/iserver/secdef/search`,
+    {
+      params: {
+        symbol: symbol,
+        name: true,
+        secType: "STK",
+      },
+    }
+  );
+}
+
+const normalizeStockSummary = (
+  item,
+  requestedSymbol
+) => ({
+  requestedSymbol,
+  symbol:
+    item?.symbol ||
+    item?.ticker ||
+    requestedSymbol,
+  conid:
+    item?.conid ||
+    item?.conidEx ||
+    null,
+  companyName:
+    item?.companyName ||
+    item?.companyHeader ||
+    item?.description ||
+    null,
+  description:
+    item?.description || null,
+  exchange:
+    item?.description || null,
+  assetClass:
+    item?.secType || null,
+});
+
+const resolveSymbolsToConids = async (
+  symbols
+) => {
+  const results = await Promise.all(
+    symbols.map(async (symbol) => {
+      const response =
+        await getStockSummary(symbol);
+      const matches = Array.isArray(
+        response.data
+      )
+        ? response.data
+        : [];
+      const bestMatch =
+        matches.find(
+          (item) =>
+            String(
+              item?.symbol || ""
+            ).toUpperCase() === symbol
+        ) || matches[0];
+
+      if (!bestMatch?.conid) {
+        throw new Error(
+          `No conid found for symbol ${symbol}.`
+        );
+      }
+
+      return normalizeStockSummary(
+        bestMatch,
+        symbol
+      );
+    })
+  );
+
+  return results;
+};
+
 const ensureBrokerageSession = async () => {
   await ibkrApi.get("/sso/validate");
 
@@ -19,7 +156,7 @@ const ensureBrokerageSession = async () => {
   };
 };
 
-export const confirmStatus = async(req, res) => {
+export const confirmStatus = async (req, res) => {
   try {
     const response = await ibkrApi.get(
       `/iserver/auth/status`
@@ -199,7 +336,7 @@ export const placeTestOrder = async (
   } catch (error) {
     console.error(
       error?.response?.data ||
-        error
+      error
     );
 
     return res.status(500).json({
@@ -211,30 +348,132 @@ export const placeTestOrder = async (
   }
 };
 
-export const getMarketData = async(req, res) => {
+export const searchStockSummary = async (req, res) => {
   try {
-    const conids =
-      req.query.conids || "265598,8314";
-    const fields =
-      req.query.fields || "31,55,84,86";
+    let symbol = req.params.symbol;
 
-    if (!conids) {
+    if(!symbol) {
+      return res.status(400).json({
+        success: false,
+        error: "Symbol parameter is required.",
+      });
+    }else{
+      symbol = symbol.trim().toUpperCase();
+    }
+
+    await ensureBrokerageSession();
+
+    const response = await getStockSummary(symbol);
+    const matches = Array.isArray(
+      response.data
+    )
+      ? response.data.map((item) =>
+          normalizeStockSummary(
+            item,
+            symbol
+          )
+        )
+      : [];
+
+    return res.status(200).json({
+      success: true,
+      data: matches,
+    });
+  } catch (error) {
+    console.error(error?.response?.data || error);
+
+    return res.status(500).json({
+      success: false,
+      error:
+        error?.response?.data ||
+        error?.message,
+    });
+  }
+}
+
+export const getMarketData = async (req, res) => {
+  try {
+    const symbols = parseCsvParam(
+      req.query.symbols
+    ).map((item) =>
+      item.trim().toUpperCase()
+    );
+    let conids = parseCsvParam(
+      req.query.conids
+    );
+    const fields = parseCsvParam(
+      req.query.fields ||
+      DEFAULT_MARKET_FIELDS.join(",")
+    );
+
+    if (
+      conids.length === 0 &&
+      symbols.length === 0
+    ) {
+      conids = ["265598", "8314"];
+    }
+
+    if (
+      conids.length === 0 &&
+      symbols.length === 0
+    ) {
       return res.status(400).json({
         success: false,
         error:
-          "Query param 'conids' is required.",
+          "Query param 'conids' or 'symbols' is required.",
       });
     }
 
     await ensureBrokerageSession();
 
+    const resolvedSymbols =
+      symbols.length > 0
+        ? await resolveSymbolsToConids(
+            symbols
+          )
+        : [];
+
+    if (resolvedSymbols.length > 0) {
+      conids = resolvedSymbols.map(
+        (item) => String(item.conid)
+      );
+    }
+
     const response = await ibkrApi.get(
-      `/iserver/marketdata/snapshot?conids=${conids}&fields=${fields}`
+      `/iserver/marketdata/snapshot?conids=${conids.join(",")}&fields=${fields.join(",")}`
+    );
+    const snapshots = Array.isArray(
+      response.data
+    )
+      ? response.data
+      : [];
+    const normalized = snapshots.map(
+      (item) =>
+        normalizeMarketSnapshot(
+          item,
+          fields
+        )
     );
 
     return res.status(200).json({
       success: true,
-      data: response.data,
+      requested: {
+        conids,
+        symbols,
+        fields,
+      },
+      resolvedSymbols,
+      fieldLabels: fields.reduce(
+        (acc, field) => {
+          acc[field] =
+            MARKET_FIELD_LABELS[field] ||
+            `Field ${field}`;
+          return acc;
+        },
+        {}
+      ),
+      data: normalized,
+      raw: snapshots,
     });
   } catch (error) {
     console.error(error?.response?.data || error);
@@ -244,7 +483,7 @@ export const getMarketData = async(req, res) => {
       error?.message;
     const isNoBridgeError =
       typeof ibkrError?.error ===
-        "string" &&
+      "string" &&
       ibkrError.error
         .toLowerCase()
         .includes("no bridge");
@@ -255,10 +494,10 @@ export const getMarketData = async(req, res) => {
       success: false,
       error: isNoBridgeError
         ? {
-            message:
-              "IBKR brokerage session is not initialized. Log in to Client Portal Gateway, confirm the session is authenticated, and make sure /iserver/accounts succeeds before requesting market data.",
-            details: ibkrError,
-          }
+          message:
+            "IBKR brokerage session is not initialized. Log in to Client Portal Gateway, confirm the session is authenticated, and make sure /iserver/accounts succeeds before requesting market data.",
+          details: ibkrError,
+        }
         : ibkrError,
     });
   }

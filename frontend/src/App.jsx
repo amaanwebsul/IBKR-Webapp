@@ -1,6 +1,7 @@
 import AppShell from "./components/layout/AppShell";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import Market from "./pages/Market";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import Portfolio from "./pages/Portfolio";
 
@@ -26,13 +27,7 @@ function App() {
           /> */}
           <Route
             path="/market"
-            element={
-              <PlaceholderPage
-                label="Market"
-                title="Market intelligence workspace"
-                description="This route is now wired. Next it should host watchlists, quote panels, movers, and contract lookup instead of reusing another page."
-              />
-            }
+            element={<Market />}
           />
           <Route
             path="/orders"

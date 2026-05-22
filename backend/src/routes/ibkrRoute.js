@@ -1,5 +1,5 @@
 import express from "express";
-import { confirmStatus, getMarketData, getPositions, getStatus, placeTestOrder } from "../controllers/ibkrController.js";
+import { confirmStatus, getMarketData, getPositions, getStatus, placeTestOrder, searchStockSummary } from "../controllers/ibkrController.js";
 
 const router = express.Router();
 
@@ -7,6 +7,7 @@ router.get("/auth-status", confirmStatus);
 router.get("/status", getStatus);
 router.get("/positions", getPositions);
 
+router.get("/search-stock/:symbol", searchStockSummary);
 router.get("/market-data", getMarketData);
 
 router.post("/test-buy", placeTestOrder);
