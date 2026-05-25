@@ -62,7 +62,7 @@ const normalizeMarketSnapshot = (
   };
 };
 
-const getStockSummary = async(symbol) => {
+const getStockSummary = async (symbol) => {
   return await ibkrApi.get(
     `/iserver/secdef/search`,
     {
@@ -352,12 +352,12 @@ export const searchStockSummary = async (req, res) => {
   try {
     let symbol = req.params.symbol;
 
-    if(!symbol) {
+    if (!symbol) {
       return res.status(400).json({
         success: false,
         error: "Symbol parameter is required.",
       });
-    }else{
+    } else {
       symbol = symbol.trim().toUpperCase();
     }
 
@@ -368,11 +368,11 @@ export const searchStockSummary = async (req, res) => {
       response.data
     )
       ? response.data.map((item) =>
-          normalizeStockSummary(
-            item,
-            symbol
-          )
+        normalizeStockSummary(
+          item,
+          symbol
         )
+      )
       : [];
 
     return res.status(200).json({
@@ -429,8 +429,8 @@ export const getMarketData = async (req, res) => {
     const resolvedSymbols =
       symbols.length > 0
         ? await resolveSymbolsToConids(
-            symbols
-          )
+          symbols
+        )
         : [];
 
     if (resolvedSymbols.length > 0) {
@@ -499,6 +499,48 @@ export const getMarketData = async (req, res) => {
           details: ibkrError,
         }
         : ibkrError,
+    });
+  }
+}
+
+export const marketCahceData = async (req, res) => {
+  try {
+    // const payload = {
+    //   instrument: "STK",
+    //   location: "STK.US",
+    //   type: "MOST_ACTIVE",
+    //   filter: [],
+    //   numberOfRows: 100,
+    // };
+
+    // const data = await ibkrSafeRequest("/iserver/scanner/run", {
+    //   method: "POST",
+    //   data: payload,
+    // });
+
+    const response = await ibkrApi.post(
+      "/iserver/scanner/run", {
+      instrument: "STK",
+      location: "STK.US",
+      type: "MOST_ACTIVE",
+      filter: [],
+      numberOfRows: 100,
+    }
+    );
+    const data = response.data;
+
+    return res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (error) {
+    console.error(error?.response?.data || error);
+
+    return res.status(500).json({
+      success: false,
+      error:
+        error?.response?.data ||
+        error?.message,
     });
   }
 }

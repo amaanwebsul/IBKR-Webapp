@@ -1,5 +1,5 @@
 import express from "express";
-import { confirmStatus, getMarketData, getPositions, getStatus, placeTestOrder, searchStockSummary } from "../controllers/ibkrController.js";
+import { confirmStatus, getMarketData, getPositions, getStatus, marketCahceData, placeTestOrder, searchStockSummary } from "../controllers/ibkrController.js";
 
 const router = express.Router();
 
@@ -9,6 +9,9 @@ router.get("/positions", getPositions);
 
 router.get("/search-stock/:symbol", searchStockSummary);
 router.get("/market-data", getMarketData);
+
+// Cache data
+router.get("/market-summary", marketCahceData);
 
 router.post("/test-buy", placeTestOrder);
 
