@@ -503,7 +503,7 @@ export const getMarketData = async (req, res) => {
   }
 }
 
-export const marketCahceData = async (req, res) => {
+export const marketSummmaryData = async (req, res) => {
   try {
     // const payload = {
     //   instrument: "STK",
