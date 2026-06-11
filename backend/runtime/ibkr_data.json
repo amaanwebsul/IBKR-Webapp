@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-11T09:00:14.443Z",
+  "updatedAt": "2026-06-11T12:00:39.993Z",
   "count": 50,
   "markets": [
     {
@@ -55,106 +55,6 @@
     },
     {
       "server_id": "1",
-      "symbol": "SOXS",
-      "conidex": "854072548",
-      "con_id": 854072548,
-      "available_chart_periods": "#R|1",
-      "company_name": "DIREX DAI SEMI BE 3X ETF-USD",
-      "contract_description_1": "SOXS",
-      "listing_exchange": "ARCA",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "SOXS",
-          "conid": 854072548,
-          "name": "DIREX DAI SEMI BE 3X ETF-USD",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "ARCA",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "2",
-      "symbol": "GLXG",
-      "conidex": "812132617",
-      "con_id": 812132617,
-      "available_chart_periods": "#R|1",
-      "company_name": "GALAXY PAYROLL GROUP LTD-A",
-      "contract_description_1": "GLXG",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "GLXG",
-          "conid": 812132617,
-          "name": "GALAXY PAYROLL GROUP LTD-A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "3",
       "symbol": "CCHH",
       "conidex": "819397087",
       "con_id": 819397087,
@@ -204,20 +104,120 @@
       }
     },
     {
-      "server_id": "4",
-      "symbol": "SHFS",
-      "conidex": "770378600",
-      "con_id": 770378600,
+      "server_id": "2",
+      "symbol": "SOXS",
+      "conidex": "854072548",
+      "con_id": 854072548,
       "available_chart_periods": "#R|1",
-      "company_name": "SHF HOLDINGS INC",
-      "contract_description_1": "SHFS",
+      "company_name": "DIREX DAI SEMI BE 3X ETF-USD",
+      "contract_description_1": "SOXS",
+      "listing_exchange": "ARCA",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "SOXS",
+          "conid": 854072548,
+          "name": "DIREX DAI SEMI BE 3X ETF-USD",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "ARCA",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "3",
+      "symbol": "HKIT",
+      "conidex": "887231771",
+      "con_id": 887231771,
+      "available_chart_periods": "#R|1",
+      "company_name": "HITEK GLOBAL INC-CL A",
+      "contract_description_1": "HKIT",
       "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "SHFS",
-          "conid": 770378600,
-          "name": "SHF HOLDINGS INC",
+          "symbol": "HKIT",
+          "conid": 887231771,
+          "name": "HITEK GLOBAL INC-CL A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "4",
+      "symbol": "GLXG",
+      "conidex": "812132617",
+      "con_id": 812132617,
+      "available_chart_periods": "#R|1",
+      "company_name": "GALAXY PAYROLL GROUP LTD-A",
+      "contract_description_1": "GLXG",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "GLXG",
+          "conid": 812132617,
+          "name": "GALAXY PAYROLL GROUP LTD-A",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NASDAQ.SCM",
@@ -255,19 +255,19 @@
     },
     {
       "server_id": "5",
-      "symbol": "HKIT",
-      "conidex": "887231771",
-      "con_id": 887231771,
+      "symbol": "SHFS",
+      "conidex": "770378600",
+      "con_id": 770378600,
       "available_chart_periods": "#R|1",
-      "company_name": "HITEK GLOBAL INC-CL A",
-      "contract_description_1": "HKIT",
+      "company_name": "SHF HOLDINGS INC",
+      "contract_description_1": "SHFS",
       "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "HKIT",
-          "conid": 887231771,
-          "name": "HITEK GLOBAL INC-CL A",
+          "symbol": "SHFS",
+          "conid": 770378600,
+          "name": "SHF HOLDINGS INC",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NASDAQ.SCM",
@@ -355,6 +355,156 @@
     },
     {
       "server_id": "7",
+      "symbol": "RKDA",
+      "conidex": "617303504",
+      "con_id": 617303504,
+      "available_chart_periods": "#R|1",
+      "company_name": "ARCADIA BIOSCIENCES INC",
+      "contract_description_1": "RKDA",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "RKDA",
+          "conid": 617303504,
+          "name": "ARCADIA BIOSCIENCES INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "8",
+      "symbol": "EDHL",
+      "conidex": "852635143",
+      "con_id": 852635143,
+      "available_chart_periods": "#R|1",
+      "company_name": "EVERBRIGHT DIGITAL HOLDING L",
+      "contract_description_1": "EDHL",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "EDHL",
+          "conid": 852635143,
+          "name": "EVERBRIGHT DIGITAL HOLDING L",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "9",
+      "symbol": "PPCB",
+      "conidex": "883618028",
+      "con_id": 883618028,
+      "available_chart_periods": "#R|1",
+      "company_name": "PROPANC BIOPHARMA INC",
+      "contract_description_1": "PPCB",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "PPCB",
+          "conid": 883618028,
+          "name": "PROPANC BIOPHARMA INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "10",
       "symbol": "ZNB",
       "conidex": "862912885",
       "con_id": 862912885,
@@ -404,57 +554,7 @@
       }
     },
     {
-      "server_id": "8",
-      "symbol": "MGN",
-      "conidex": "816879129",
-      "con_id": 816879129,
-      "available_chart_periods": "#R|1",
-      "company_name": "MEGAN HOLDINGS LTD-CL A",
-      "contract_description_1": "MGN",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "MGN",
-          "conid": 816879129,
-          "name": "MEGAN HOLDINGS LTD-CL A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "9",
+      "server_id": "11",
       "symbol": "YYGH",
       "conidex": "866505731",
       "con_id": 866505731,
@@ -504,357 +604,7 @@
       }
     },
     {
-      "server_id": "10",
-      "symbol": "BATL",
-      "conidex": "403525393",
-      "con_id": 403525393,
-      "available_chart_periods": "#R|1",
-      "company_name": "BATTALION OIL CORP",
-      "contract_description_1": "BATL",
-      "listing_exchange": "AMEX",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "BATL",
-          "conid": 403525393,
-          "name": "BATTALION OIL CORP",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "AMEX",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "11",
-      "symbol": "RUBI",
-      "conidex": "871579981",
-      "con_id": 871579981,
-      "available_chart_periods": "#R|1",
-      "company_name": "RUBICO INC",
-      "contract_description_1": "RUBI",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "RUBI",
-          "conid": 871579981,
-          "name": "RUBICO INC",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
       "server_id": "12",
-      "symbol": "WOK",
-      "conidex": "841849264",
-      "con_id": 841849264,
-      "available_chart_periods": "#R|1",
-      "company_name": "WORK MEDICAL TECHNOLOGY GR-A",
-      "contract_description_1": "WOK",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "WOK",
-          "conid": 841849264,
-          "name": "WORK MEDICAL TECHNOLOGY GR-A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "13",
-      "symbol": "NCT",
-      "conidex": "870203079",
-      "con_id": 870203079,
-      "available_chart_periods": "#R|1",
-      "company_name": "INTERCONT CAYMAN LTD CLASS A",
-      "contract_description_1": "NCT",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "NCT",
-          "conid": 870203079,
-          "name": "INTERCONT CAYMAN LTD CLASS A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "14",
-      "symbol": "CPOP",
-      "conidex": "662521386",
-      "con_id": 662521386,
-      "available_chart_periods": "#R|1",
-      "company_name": "POP CULTURE GROUP CO LTD-A",
-      "contract_description_1": "CPOP",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "CPOP",
-          "conid": 662521386,
-          "name": "POP CULTURE GROUP CO LTD-A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "15",
-      "symbol": "ICON",
-      "conidex": "843875280",
-      "con_id": 843875280,
-      "available_chart_periods": "#R|1",
-      "company_name": "ICON ENERGY CORP",
-      "contract_description_1": "ICON",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "ICON",
-          "conid": 843875280,
-          "name": "ICON ENERGY CORP",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "16",
-      "symbol": "RBNE",
-      "conidex": "841260658",
-      "con_id": 841260658,
-      "available_chart_periods": "#R|1",
-      "company_name": "ROBIN ENERGY LTD",
-      "contract_description_1": "RBNE",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "RBNE",
-          "conid": 841260658,
-          "name": "ROBIN ENERGY LTD",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "17",
       "symbol": "SMCI",
       "conidex": "731466419",
       "con_id": 731466419,
@@ -904,23 +654,273 @@
       }
     },
     {
-      "server_id": "18",
-      "symbol": "TMDE",
-      "conidex": "777715198",
-      "con_id": 777715198,
+      "server_id": "13",
+      "symbol": "ELAB",
+      "conidex": "861863560",
+      "con_id": 861863560,
       "available_chart_periods": "#R|1",
-      "company_name": "TMD ENERGY LTD",
-      "contract_description_1": "TMDE",
+      "company_name": "PMGC HOLDINGS INC",
+      "contract_description_1": "ELAB",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "ELAB",
+          "conid": 861863560,
+          "name": "PMGC HOLDINGS INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "14",
+      "symbol": "BATL",
+      "conidex": "403525393",
+      "con_id": 403525393,
+      "available_chart_periods": "#R|1",
+      "company_name": "BATTALION OIL CORP",
+      "contract_description_1": "BATL",
       "listing_exchange": "AMEX",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "TMDE",
-          "conid": 777715198,
-          "name": "TMD ENERGY LTD",
+          "symbol": "BATL",
+          "conid": 403525393,
+          "name": "BATTALION OIL CORP",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "AMEX",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "15",
+      "symbol": "KMRK",
+      "conidex": "799369428",
+      "con_id": 799369428,
+      "available_chart_periods": "#R|1",
+      "company_name": "K-TECH SOLUTIONS CO LTD-A",
+      "contract_description_1": "KMRK",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "KMRK",
+          "conid": 799369428,
+          "name": "K-TECH SOLUTIONS CO LTD-A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "16",
+      "symbol": "WOK",
+      "conidex": "841849264",
+      "con_id": 841849264,
+      "available_chart_periods": "#R|1",
+      "company_name": "WORK MEDICAL TECHNOLOGY GR-A",
+      "contract_description_1": "WOK",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "WOK",
+          "conid": 841849264,
+          "name": "WORK MEDICAL TECHNOLOGY GR-A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "17",
+      "symbol": "QUCY",
+      "conidex": "745953288",
+      "con_id": 745953288,
+      "available_chart_periods": "#R|1",
+      "company_name": "QUANTUM CYBER NV",
+      "contract_description_1": "QUCY",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "QUCY",
+          "conid": 745953288,
+          "name": "QUANTUM CYBER NV",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "18",
+      "symbol": "DTSS",
+      "conidex": "873491459",
+      "con_id": 873491459,
+      "available_chart_periods": "#R|1",
+      "company_name": "DATASEA INTELLIGENT TEC-CL A",
+      "contract_description_1": "DTSS",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "DTSS",
+          "conid": 873491459,
+          "name": "DATASEA INTELLIGENT TEC-CL A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -955,22 +955,22 @@
     },
     {
       "server_id": "19",
-      "symbol": "SOXL",
-      "conidex": "73340487",
-      "con_id": 73340487,
+      "symbol": "MGN",
+      "conidex": "816879129",
+      "con_id": 816879129,
       "available_chart_periods": "#R|1",
-      "company_name": "DIREX DAIL SEMI BU 3X ET-USD",
-      "contract_description_1": "SOXL",
-      "listing_exchange": "ARCA",
+      "company_name": "MEGAN HOLDINGS LTD-CL A",
+      "contract_description_1": "MGN",
+      "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "SOXL",
-          "conid": 73340487,
-          "name": "DIREX DAIL SEMI BU 3X ET-USD",
+          "symbol": "MGN",
+          "conid": 816879129,
+          "name": "MEGAN HOLDINGS LTD-CL A",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "ARCA",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1005,22 +1005,22 @@
     },
     {
       "server_id": "20",
-      "symbol": "SQQQ",
-      "conidex": "831082828",
-      "con_id": 831082828,
+      "symbol": "WHLR",
+      "conidex": "874768804",
+      "con_id": 874768804,
       "available_chart_periods": "#R|1",
-      "company_name": "PROSHARES ULTRAPRO SHORT QQQ",
-      "contract_description_1": "SQQQ",
-      "listing_exchange": "NASDAQ.NMS",
+      "company_name": "WHEELER REAL ESTATE INVESTME",
+      "contract_description_1": "WHLR",
+      "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "SQQQ",
-          "conid": 831082828,
-          "name": "PROSHARES ULTRAPRO SHORT QQQ",
+          "symbol": "WHLR",
+          "conid": 874768804,
+          "name": "WHEELER REAL ESTATE INVESTME",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1055,22 +1055,22 @@
     },
     {
       "server_id": "21",
-      "symbol": "CLDI",
-      "conidex": "802783797",
-      "con_id": 802783797,
+      "symbol": "PPBT",
+      "conidex": "859001506",
+      "con_id": 859001506,
       "available_chart_periods": "#R|1",
-      "company_name": "CALIDI BIOTHERAPEUTICS INC",
-      "contract_description_1": "CLDI",
-      "listing_exchange": "AMEX",
+      "company_name": "PURPLE BIOTECH LTD-ADR",
+      "contract_description_1": "PPBT",
+      "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "CLDI",
-          "conid": 802783797,
-          "name": "CALIDI BIOTHERAPEUTICS INC",
+          "symbol": "PPBT",
+          "conid": 859001506,
+          "name": "PURPLE BIOTECH LTD-ADR",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "AMEX",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1105,22 +1105,22 @@
     },
     {
       "server_id": "22",
-      "symbol": "TQQQ",
-      "conidex": "72539702",
-      "con_id": 72539702,
+      "symbol": "CPOP",
+      "conidex": "662521386",
+      "con_id": 662521386,
       "available_chart_periods": "#R|1",
-      "company_name": "PROSHARES ULTRAPRO QQQ",
-      "contract_description_1": "TQQQ",
-      "listing_exchange": "NASDAQ.NMS",
+      "company_name": "POP CULTURE GROUP CO LTD-A",
+      "contract_description_1": "CPOP",
+      "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "TQQQ",
-          "conid": 72539702,
-          "name": "PROSHARES ULTRAPRO QQQ",
+          "symbol": "CPOP",
+          "conid": 662521386,
+          "name": "POP CULTURE GROUP CO LTD-A",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1155,256 +1155,6 @@
     },
     {
       "server_id": "23",
-      "symbol": "TSLL",
-      "conidex": "578561429",
-      "con_id": 578561429,
-      "available_chart_periods": "#R|1",
-      "company_name": "DIRX DLY TSLA BUL 2X ETF-AUI",
-      "contract_description_1": "TSLL",
-      "listing_exchange": "NASDAQ.NMS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "TSLL",
-          "conid": 578561429,
-          "name": "DIRX DLY TSLA BUL 2X ETF-AUI",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "24",
-      "symbol": "QH",
-      "conidex": "877287503",
-      "con_id": 877287503,
-      "available_chart_periods": "#R|1",
-      "company_name": "QUHUO LTD-ADR",
-      "contract_description_1": "QH",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "QH",
-          "conid": 877287503,
-          "name": "QUHUO LTD-ADR",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "25",
-      "symbol": "SNXX",
-      "conidex": "849555205",
-      "con_id": 849555205,
-      "available_chart_periods": "#R|1",
-      "company_name": "TRADR 2X LONG SNDK DAILY ETF",
-      "contract_description_1": "SNXX",
-      "listing_exchange": "BATS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "SNXX",
-          "conid": 849555205,
-          "name": "TRADR 2X LONG SNDK DAILY ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "BATS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "26",
-      "symbol": "UCAR",
-      "conidex": "869892469",
-      "con_id": 869892469,
-      "available_chart_periods": "#R|1",
-      "company_name": "U POWER LTD-A",
-      "contract_description_1": "UCAR",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "UCAR",
-          "conid": 869892469,
-          "name": "U POWER LTD-A",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "27",
-      "symbol": "BURU",
-      "conidex": "855466785",
-      "con_id": 855466785,
-      "available_chart_periods": "#R|1",
-      "company_name": "NUBURU INC",
-      "contract_description_1": "BURU",
-      "listing_exchange": "AMEX",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "BURU",
-          "conid": 855466785,
-          "name": "NUBURU INC",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "AMEX",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "28",
       "symbol": "PAVS",
       "conidex": "869296590",
       "con_id": 869296590,
@@ -1454,23 +1204,23 @@
       }
     },
     {
-      "server_id": "29",
-      "symbol": "MSTU",
-      "conidex": "833844154",
-      "con_id": 833844154,
+      "server_id": "24",
+      "symbol": "LRHC",
+      "conidex": "874768801",
+      "con_id": 874768801,
       "available_chart_periods": "#R|1",
-      "company_name": "T-REX 2X LONG MSTR DT ETF",
-      "contract_description_1": "MSTU",
-      "listing_exchange": "BATS",
+      "company_name": "LA ROSA HOLDINGS CORP",
+      "contract_description_1": "LRHC",
+      "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "MSTU",
-          "conid": 833844154,
-          "name": "T-REX 2X LONG MSTR DT ETF",
+          "symbol": "LRHC",
+          "conid": 874768801,
+          "name": "LA ROSA HOLDINGS CORP",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "BATS",
+          "primaryExchange": "NASDAQ.SCM",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1504,20 +1254,170 @@
       }
     },
     {
-      "server_id": "30",
-      "symbol": "NOK",
-      "conidex": "661513",
-      "con_id": 661513,
+      "server_id": "25",
+      "symbol": "GCTK",
+      "conidex": "791454728",
+      "con_id": 791454728,
       "available_chart_periods": "#R|1",
-      "company_name": "NOKIA CORP-SPON ADR",
-      "contract_description_1": "NOK",
+      "company_name": "GLUCOTRACK INC",
+      "contract_description_1": "GCTK",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "GCTK",
+          "conid": 791454728,
+          "name": "GLUCOTRACK INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "26",
+      "symbol": "RUBI",
+      "conidex": "871579981",
+      "con_id": 871579981,
+      "available_chart_periods": "#R|1",
+      "company_name": "RUBICO INC",
+      "contract_description_1": "RUBI",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "RUBI",
+          "conid": 871579981,
+          "name": "RUBICO INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "27",
+      "symbol": "TMDE",
+      "conidex": "777715198",
+      "con_id": 777715198,
+      "available_chart_periods": "#R|1",
+      "company_name": "TMD ENERGY LTD",
+      "contract_description_1": "TMDE",
+      "listing_exchange": "AMEX",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "TMDE",
+          "conid": 777715198,
+          "name": "TMD ENERGY LTD",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "AMEX",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "28",
+      "symbol": "WBX",
+      "conidex": "792307606",
+      "con_id": 792307606,
+      "available_chart_periods": "#R|1",
+      "company_name": "WALLBOX NV",
+      "contract_description_1": "WBX",
       "listing_exchange": "NYSE",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "NOK",
-          "conid": 661513,
-          "name": "NOKIA CORP-SPON ADR",
+          "symbol": "WBX",
+          "conid": 792307606,
+          "name": "WALLBOX NV",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NYSE",
@@ -1554,20 +1454,20 @@
       }
     },
     {
-      "server_id": "31",
-      "symbol": "IONZ",
-      "conidex": "837140575",
-      "con_id": 837140575,
+      "server_id": "29",
+      "symbol": "SQQQ",
+      "conidex": "831082828",
+      "con_id": 831082828,
       "available_chart_periods": "#R|1",
-      "company_name": "DEF DAILY TAR 2X IONQ",
-      "contract_description_1": "IONZ",
+      "company_name": "PROSHARES ULTRAPRO SHORT QQQ",
+      "contract_description_1": "SQQQ",
       "listing_exchange": "NASDAQ.NMS",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "IONZ",
-          "conid": 837140575,
-          "name": "DEF DAILY TAR 2X IONQ",
+          "symbol": "SQQQ",
+          "conid": 831082828,
+          "name": "PROSHARES ULTRAPRO SHORT QQQ",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NASDAQ.NMS",
@@ -1604,20 +1504,120 @@
       }
     },
     {
-      "server_id": "32",
-      "symbol": "BYAH",
-      "conidex": "855750507",
-      "con_id": 855750507,
+      "server_id": "30",
+      "symbol": "RBNE",
+      "conidex": "841260658",
+      "con_id": 841260658,
       "available_chart_periods": "#R|1",
-      "company_name": "PARK HA BIOLOGICAL TECH-A",
-      "contract_description_1": "BYAH",
+      "company_name": "ROBIN ENERGY LTD",
+      "contract_description_1": "RBNE",
       "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "BYAH",
-          "conid": 855750507,
-          "name": "PARK HA BIOLOGICAL TECH-A",
+          "symbol": "RBNE",
+          "conid": 841260658,
+          "name": "ROBIN ENERGY LTD",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "31",
+      "symbol": "LGHL",
+      "conidex": "834260493",
+      "con_id": 834260493,
+      "available_chart_periods": "#R|1",
+      "company_name": "LION GROUP HOLDING LTD-S ADR",
+      "contract_description_1": "LGHL",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "LGHL",
+          "conid": 834260493,
+          "name": "LION GROUP HOLDING LTD-S ADR",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "32",
+      "symbol": "QH",
+      "conidex": "877287503",
+      "con_id": 877287503,
+      "available_chart_periods": "#R|1",
+      "company_name": "QUHUO LTD-ADR",
+      "contract_description_1": "QH",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "QH",
+          "conid": 877287503,
+          "name": "QUHUO LTD-ADR",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NASDAQ.SCM",
@@ -1655,22 +1655,22 @@
     },
     {
       "server_id": "33",
-      "symbol": "SNDQ",
-      "conidex": "876174146",
-      "con_id": 876174146,
+      "symbol": "SOXL",
+      "conidex": "73340487",
+      "con_id": 73340487,
       "available_chart_periods": "#R|1",
-      "company_name": "TRADR 2X SHRT SNDK DLY ETF",
-      "contract_description_1": "SNDQ",
-      "listing_exchange": "BATS",
+      "company_name": "DIREX DAIL SEMI BU 3X ET-USD",
+      "contract_description_1": "SOXL",
+      "listing_exchange": "ARCA",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "SNDQ",
-          "conid": 876174146,
-          "name": "TRADR 2X SHRT SNDK DLY ETF",
+          "symbol": "SOXL",
+          "conid": 73340487,
+          "name": "DIREX DAIL SEMI BU 3X ET-USD",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "BATS",
+          "primaryExchange": "ARCA",
           "marketDataAvailability": null
         },
         "pricing": {
@@ -1705,6 +1705,356 @@
     },
     {
       "server_id": "34",
+      "symbol": "NCT",
+      "conidex": "870203079",
+      "con_id": 870203079,
+      "available_chart_periods": "#R|1",
+      "company_name": "INTERCONT CAYMAN LTD CLASS A",
+      "contract_description_1": "NCT",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "NCT",
+          "conid": 870203079,
+          "name": "INTERCONT CAYMAN LTD CLASS A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "35",
+      "symbol": "MASK",
+      "conidex": "863831946",
+      "con_id": 863831946,
+      "available_chart_periods": "#R|1",
+      "company_name": "3 E NETWORK TECHNOLOGY GRP-A",
+      "contract_description_1": "MASK",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "MASK",
+          "conid": 863831946,
+          "name": "3 E NETWORK TECHNOLOGY GRP-A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "36",
+      "symbol": "TQQQ",
+      "conidex": "72539702",
+      "con_id": 72539702,
+      "available_chart_periods": "#R|1",
+      "company_name": "PROSHARES ULTRAPRO QQQ",
+      "contract_description_1": "TQQQ",
+      "listing_exchange": "NASDAQ.NMS",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "TQQQ",
+          "conid": 72539702,
+          "name": "PROSHARES ULTRAPRO QQQ",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.NMS",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "37",
+      "symbol": "TSLL",
+      "conidex": "578561429",
+      "con_id": 578561429,
+      "available_chart_periods": "#R|1",
+      "company_name": "DIRX DLY TSLA BUL 2X ETF-AUI",
+      "contract_description_1": "TSLL",
+      "listing_exchange": "NASDAQ.NMS",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "TSLL",
+          "conid": 578561429,
+          "name": "DIRX DLY TSLA BUL 2X ETF-AUI",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.NMS",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "38",
+      "symbol": "ICON",
+      "conidex": "843875280",
+      "con_id": 843875280,
+      "available_chart_periods": "#R|1",
+      "company_name": "ICON ENERGY CORP",
+      "contract_description_1": "ICON",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "ICON",
+          "conid": 843875280,
+          "name": "ICON ENERGY CORP",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "39",
+      "symbol": "NAMI",
+      "conidex": "736726746",
+      "con_id": 736726746,
+      "available_chart_periods": "#R|1",
+      "company_name": "JINXIN TECHNOLOGY HOLDIN-ADR",
+      "contract_description_1": "NAMI",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "NAMI",
+          "conid": 736726746,
+          "name": "JINXIN TECHNOLOGY HOLDIN-ADR",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "40",
+      "symbol": "MTEN",
+      "conidex": "848759316",
+      "con_id": 848759316,
+      "available_chart_periods": "#R|1",
+      "company_name": "MINGTENG INT CORP-A",
+      "contract_description_1": "MTEN",
+      "listing_exchange": "NASDAQ.SCM",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "MTEN",
+          "conid": 848759316,
+          "name": "MINGTENG INT CORP-A",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "NASDAQ.SCM",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "41",
       "symbol": "SMCX",
       "conidex": "865203898",
       "con_id": 865203898,
@@ -1754,507 +2104,7 @@
       }
     },
     {
-      "server_id": "35",
-      "symbol": "BMNU",
-      "conidex": "817579037",
-      "con_id": 817579037,
-      "available_chart_periods": "#R|1",
-      "company_name": "T-REX 2X LG BMNR DT ETF",
-      "contract_description_1": "BMNU",
-      "listing_exchange": "BATS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "BMNU",
-          "conid": 817579037,
-          "name": "T-REX 2X LG BMNR DT ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "BATS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "36",
-      "symbol": "DRAM",
-      "conidex": "870556708",
-      "con_id": 870556708,
-      "available_chart_periods": "#R|1",
-      "company_name": "ROUNDHILL MEMORY ETF",
-      "contract_description_1": "DRAM",
-      "listing_exchange": "BATS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "DRAM",
-          "conid": 870556708,
-          "name": "ROUNDHILL MEMORY ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "BATS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "37",
-      "symbol": "RKLZ",
-      "conidex": "866505666",
-      "con_id": 866505666,
-      "available_chart_periods": "#R|1",
-      "company_name": "DEF DAILY T2X SHORT RKLB ETF",
-      "contract_description_1": "RKLZ",
-      "listing_exchange": "NASDAQ.NMS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "RKLZ",
-          "conid": 866505666,
-          "name": "DEF DAILY T2X SHORT RKLB ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "38",
-      "symbol": "RDW",
-      "conidex": "512000171",
-      "con_id": 512000171,
-      "available_chart_periods": "#R|1",
-      "company_name": "REDWIRE CORP",
-      "contract_description_1": "RDW",
-      "listing_exchange": "NYSE",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "RDW",
-          "conid": 512000171,
-          "name": "REDWIRE CORP",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NYSE",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "39",
-      "symbol": "RGTZ",
-      "conidex": "821230094",
-      "con_id": 821230094,
-      "available_chart_periods": "#R|1",
-      "company_name": "DEFIANCE D TRG 2X S RGTI ETF",
-      "contract_description_1": "RGTZ",
-      "listing_exchange": "NASDAQ.NMS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "RGTZ",
-          "conid": 821230094,
-          "name": "DEFIANCE D TRG 2X S RGTI ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "40",
-      "symbol": "UVIX",
-      "conidex": "752090595",
-      "con_id": 752090595,
-      "available_chart_periods": "#R|1",
-      "company_name": "2X LONG VIX FUTURES ETF",
-      "contract_description_1": "UVIX",
-      "listing_exchange": "BATS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "UVIX",
-          "conid": 752090595,
-          "name": "2X LONG VIX FUTURES ETF",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "BATS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "41",
-      "symbol": "CHOW",
-      "conidex": "814087908",
-      "con_id": 814087908,
-      "available_chart_periods": "#R|1",
-      "company_name": "CHOWCHOW CLOUD INTERNATIONAL",
-      "contract_description_1": "CHOW",
-      "listing_exchange": "AMEX",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "CHOW",
-          "conid": 814087908,
-          "name": "CHOWCHOW CLOUD INTERNATIONAL",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "AMEX",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
       "server_id": "42",
-      "symbol": "MSW",
-      "conidex": "744107488",
-      "con_id": 744107488,
-      "available_chart_periods": "#R|1",
-      "company_name": "MING SHING GROUP HOLDINGS LT",
-      "contract_description_1": "MSW",
-      "listing_exchange": "NASDAQ.SCM",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "MSW",
-          "conid": 744107488,
-          "name": "MING SHING GROUP HOLDINGS LT",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.SCM",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "43",
-      "symbol": "TPET",
-      "conidex": "739812214",
-      "con_id": 739812214,
-      "available_chart_periods": "#R|1",
-      "company_name": "TRIO PETROLEUM CORP",
-      "contract_description_1": "TPET",
-      "listing_exchange": "AMEX",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "TPET",
-          "conid": 739812214,
-          "name": "TRIO PETROLEUM CORP",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "AMEX",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "44",
-      "symbol": "MU",
-      "conidex": "9939",
-      "con_id": 9939,
-      "available_chart_periods": "#R|1",
-      "company_name": "MICRON TECHNOLOGY INC",
-      "contract_description_1": "MU",
-      "listing_exchange": "NASDAQ.NMS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "MU",
-          "conid": 9939,
-          "name": "MICRON TECHNOLOGY INC",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
-      "server_id": "45",
       "symbol": "NVDA",
       "conidex": "4815747",
       "con_id": 4815747,
@@ -2304,20 +2154,220 @@
       }
     },
     {
-      "server_id": "46",
-      "symbol": "PLUG",
-      "conidex": "88385302",
-      "con_id": 88385302,
+      "server_id": "43",
+      "symbol": "SNXX",
+      "conidex": "849555205",
+      "con_id": 849555205,
       "available_chart_periods": "#R|1",
-      "company_name": "PLUG POWER INC",
-      "contract_description_1": "PLUG",
+      "company_name": "TRADR 2X LONG SNDK DAILY ETF",
+      "contract_description_1": "SNXX",
+      "listing_exchange": "BATS",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "SNXX",
+          "conid": 849555205,
+          "name": "TRADR 2X LONG SNDK DAILY ETF",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "BATS",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "44",
+      "symbol": "MSTU",
+      "conidex": "833844154",
+      "con_id": 833844154,
+      "available_chart_periods": "#R|1",
+      "company_name": "T-REX 2X LONG MSTR DT ETF",
+      "contract_description_1": "MSTU",
+      "listing_exchange": "BATS",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "MSTU",
+          "conid": 833844154,
+          "name": "T-REX 2X LONG MSTR DT ETF",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "BATS",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "45",
+      "symbol": "TZA",
+      "conidex": "468796852",
+      "con_id": 468796852,
+      "available_chart_periods": "#R|1",
+      "company_name": "DIRX DLY SMAL CAP B3X ETF-UI",
+      "contract_description_1": "TZA",
+      "listing_exchange": "ARCA",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "TZA",
+          "conid": 468796852,
+          "name": "DIRX DLY SMAL CAP B3X ETF-UI",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "ARCA",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "46",
+      "symbol": "BURU",
+      "conidex": "855466785",
+      "con_id": 855466785,
+      "available_chart_periods": "#R|1",
+      "company_name": "NUBURU INC",
+      "contract_description_1": "BURU",
+      "listing_exchange": "AMEX",
+      "sec_type": "STK",
+      "summary": {
+        "identity": {
+          "symbol": "BURU",
+          "conid": 855466785,
+          "name": "NUBURU INC",
+          "secType": "STK",
+          "currency": "USD",
+          "primaryExchange": "AMEX",
+          "marketDataAvailability": null
+        },
+        "pricing": {
+          "last": null,
+          "bid": null,
+          "ask": null,
+          "bidSize": null,
+          "askSize": null,
+          "volume": null
+        },
+        "liquidity": {
+          "active": false
+        },
+        "marketQuality": {
+          "level": "ignore",
+          "liquidityScore": 0,
+          "flags": [
+            "no_entitlement"
+          ]
+        },
+        "priceConfidence": {
+          "score": 0,
+          "level": "none",
+          "reasons": [
+            "no_market_data_entitlement"
+          ]
+        },
+        "risk": {
+          "snapshotUnreliable": true
+        }
+      }
+    },
+    {
+      "server_id": "47",
+      "symbol": "VBIO",
+      "conidex": "766484201",
+      "con_id": 766484201,
+      "available_chart_periods": "#R|1",
+      "company_name": "VALION BIO INC",
+      "contract_description_1": "VBIO",
       "listing_exchange": "NASDAQ.SCM",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "PLUG",
-          "conid": 88385302,
-          "name": "PLUG POWER INC",
+          "symbol": "VBIO",
+          "conid": 766484201,
+          "name": "VALION BIO INC",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NASDAQ.SCM",
@@ -2354,20 +2404,20 @@
       }
     },
     {
-      "server_id": "47",
-      "symbol": "ORCL",
-      "conidex": "272800",
-      "con_id": 272800,
+      "server_id": "48",
+      "symbol": "NOK",
+      "conidex": "661513",
+      "con_id": 661513,
       "available_chart_periods": "#R|1",
-      "company_name": "ORACLE CORP",
-      "contract_description_1": "ORCL",
+      "company_name": "NOKIA CORP-SPON ADR",
+      "contract_description_1": "NOK",
       "listing_exchange": "NYSE",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "ORCL",
-          "conid": 272800,
-          "name": "ORACLE CORP",
+          "symbol": "NOK",
+          "conid": 661513,
+          "name": "NOKIA CORP-SPON ADR",
           "secType": "STK",
           "currency": "USD",
           "primaryExchange": "NYSE",
@@ -2404,73 +2454,23 @@
       }
     },
     {
-      "server_id": "48",
-      "symbol": "MRVL",
-      "conidex": "483492393",
-      "con_id": 483492393,
-      "available_chart_periods": "#R|1",
-      "company_name": "MARVELL TECHNOLOGY INC",
-      "contract_description_1": "MRVL",
-      "listing_exchange": "NASDAQ.NMS",
-      "sec_type": "STK",
-      "summary": {
-        "identity": {
-          "symbol": "MRVL",
-          "conid": 483492393,
-          "name": "MARVELL TECHNOLOGY INC",
-          "secType": "STK",
-          "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
-          "marketDataAvailability": null
-        },
-        "pricing": {
-          "last": null,
-          "bid": null,
-          "ask": null,
-          "bidSize": null,
-          "askSize": null,
-          "volume": null
-        },
-        "liquidity": {
-          "active": false
-        },
-        "marketQuality": {
-          "level": "ignore",
-          "liquidityScore": 0,
-          "flags": [
-            "no_entitlement"
-          ]
-        },
-        "priceConfidence": {
-          "score": 0,
-          "level": "none",
-          "reasons": [
-            "no_market_data_entitlement"
-          ]
-        },
-        "risk": {
-          "snapshotUnreliable": true
-        }
-      }
-    },
-    {
       "server_id": "49",
-      "symbol": "INTC",
-      "conidex": "270639",
-      "con_id": 270639,
+      "symbol": "SNDQ",
+      "conidex": "876174146",
+      "con_id": 876174146,
       "available_chart_periods": "#R|1",
-      "company_name": "INTEL CORP",
-      "contract_description_1": "INTC",
-      "listing_exchange": "NASDAQ.NMS",
+      "company_name": "TRADR 2X SHRT SNDK DLY ETF",
+      "contract_description_1": "SNDQ",
+      "listing_exchange": "BATS",
       "sec_type": "STK",
       "summary": {
         "identity": {
-          "symbol": "INTC",
-          "conid": 270639,
-          "name": "INTEL CORP",
+          "symbol": "SNDQ",
+          "conid": 876174146,
+          "name": "TRADR 2X SHRT SNDK DLY ETF",
           "secType": "STK",
           "currency": "USD",
-          "primaryExchange": "NASDAQ.NMS",
+          "primaryExchange": "BATS",
           "marketDataAvailability": null
         },
         "pricing": {

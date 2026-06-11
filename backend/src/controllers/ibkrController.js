@@ -1,4 +1,9 @@
 import ibkrApi from "../services/ibkrService.js";
+import fs from 'fs';
+import path from "path";
+import fsPromises from "fs/promises";
+
+const CACHE_FILE = path.resolve("runtime", "ibkr_data.json");
 
 const DEFAULT_MARKET_FIELDS = [
   "31",
@@ -505,32 +510,23 @@ export const getMarketData = async (req, res) => {
 
 export const marketSummmaryData = async (req, res) => {
   try {
-    // const payload = {
-    //   instrument: "STK",
-    //   location: "STK.US",
-    //   type: "MOST_ACTIVE",
-    //   filter: [],
-    //   numberOfRows: 100,
-    // };
-
-    // const data = await ibkrSafeRequest("/iserver/scanner/run", {
-    //   method: "POST",
-    //   data: payload,
-    // });
-
-    const response = await ibkrApi.post(
-      "/iserver/scanner/run", {
+    const payload = {
       instrument: "STK",
       location: "STK.US",
       type: "MOST_ACTIVE",
       filter: [],
       numberOfRows: 100,
-    }
-    );
+    };
+
+    const response = await ibkrApi.post("/iserver/scanner/run", {
+      ...payload
+    });
+
     const data = response.data;
 
     return res.status(200).json({
       success: true,
+      count: data?.contracts?.length,
       data,
     });
   } catch (error) {
@@ -541,6 +537,89 @@ export const marketSummmaryData = async (req, res) => {
       error:
         error?.response?.data ||
         error?.message,
+    });
+  }
+}
+
+export async function getCachedIBKRMarkets(req, res) {
+  try {
+    const offset = Number(req.query.offset || 0);
+    const limit = Math.min(Number(req.query.limit || 25), 100);
+
+    const searchRaw = String(req.query.search || "").toLowerCase().trim();
+    const cleanSearch = searchRaw.replace(/\s+/g, " ");
+
+    const quality = String(req.query.quality || "all").toLowerCase();
+    const minConfidence = Number(req.query.minConfidence || 0);
+
+    if (!fs.existsSync(CACHE_FILE)) {
+      return res.json({
+        success: true,
+        data: {
+          total_results_count: 0,
+          results: [],
+        },
+      });
+    }
+
+    const raw = await fsPromises.readFile(CACHE_FILE, "utf8");
+    const cache = JSON.parse(raw);
+
+    const markets = Array.isArray(cache.markets) ? cache.markets : [];
+
+    /* ---------- Filter ---------- */
+    let filtered = markets.filter((m) => {
+      const identity = m.summary?.identity;
+      const qualityLevel = m.summary?.marketQuality?.level;
+      const confidenceScore = m.summary?.priceConfidence?.score ?? 0;
+
+      if (!identity) return false;
+
+      if (quality !== "all" && qualityLevel !== quality) return false;
+      if (confidenceScore < minConfidence) return false;
+
+      if (cleanSearch) {
+        const haystack = [
+          identity.symbol,
+          identity.name,
+          identity.primaryExchange,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        if (!haystack.includes(cleanSearch)) return false;
+      }
+
+      return true;
+    });
+
+    /* ---------- Sort ---------- */
+    filtered.sort((a, b) => {
+      const qa = a.summary?.marketQuality?.liquidityScore ?? 0;
+      const qb = b.summary?.marketQuality?.liquidityScore ?? 0;
+      return qb - qa;
+    });
+
+    const paginated = filtered.slice(offset, offset + limit);
+
+    return res.json({
+      success: true,
+      cachedAt: cache.updatedAt,
+      data: {
+        total_results_count: filtered.length,
+        offset,
+        limit,
+        hasMore: offset + limit < filtered.length,
+        results: paginated,
+      },
+    });
+  } catch (err) {
+    console.error("getCachedIBKRMarkets error:", err);
+
+    return res.status(500).json({
+      success: false,
+      error: err.message || "Failed to load IBKR cache",
     });
   }
 }

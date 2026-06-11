@@ -6,16 +6,16 @@ const keepAlive = () => {
       const active = await ibkrClient.get(
         "/tickle"
       );
-
+      const now = new Date(Date.now());
       console.log(
-        "IBKR session alive"
+        `IBKR session alive. Hit at ${now.toString()}`
       );
     } catch (error) {
       console.log(
         "IBKR session expired"
       );
     }
-  }, 60000); // every 1 minute
+  }, 2 * 60 * 1000); // every 2 minute
 };
 
 export default keepAlive;
