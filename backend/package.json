@@ -17,9 +17,13 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "fs": "^0.0.1-security",
     "helmet": "^8.1.0",
     "mongoose": "^9.6.2",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "node-cron": "^4.2.1",
+    "p-limit": "^7.3.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
