@@ -36,3 +36,22 @@ export const searchStockSummary = async (
 
   return response.data;
 };
+
+export async function useIbkrMarketsInfinite(
+  offset,
+  limit,
+  search
+) {
+  const params = {};
+
+  params.offset = offset;
+  params.limit = limit;
+  params.search = search;
+
+  const response = await api.get(
+    `/ibkr/cached-market-summary`,
+    { params }
+  );
+
+  return response.data;
+}

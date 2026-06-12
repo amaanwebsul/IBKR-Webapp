@@ -602,18 +602,20 @@ export async function getCachedIBKRMarkets(req, res) {
     });
 
     const paginated = filtered.slice(offset, offset + limit);
+    setTimeout(() => {
+      return res.json({
+        success: true,
+        cachedAt: cache.updatedAt,
+        data: {
+          total_results_count: filtered.length,
+          offset,
+          limit,
+          hasMore: offset + limit < filtered.length,
+          results: paginated,
+        },
+      });
+    }, 1000);
 
-    return res.json({
-      success: true,
-      cachedAt: cache.updatedAt,
-      data: {
-        total_results_count: filtered.length,
-        offset,
-        limit,
-        hasMore: offset + limit < filtered.length,
-        results: paginated,
-      },
-    });
   } catch (err) {
     console.error("getCachedIBKRMarkets error:", err);
 
