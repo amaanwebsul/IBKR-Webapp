@@ -159,7 +159,8 @@ export function startIBKRFetchCron() {
 
   // ========================= Every hour (Timezone: UTC) =================================
   cronJob = cron.schedule(
-    "0 0 * * * *",
+    "0 0 * * * *",      // Trigger every hour
+    // "0 2 * * * *",      // Test Trigger
     () => {
       fetchAndCacheIBKRData();
     },

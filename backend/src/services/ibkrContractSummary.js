@@ -50,6 +50,93 @@ const SNAPSHOT_FIELDS = [
   7689  // recent earnings
 ].join(",");
 
+function parseNum(v) {
+  if (v == null) return null;
+  if (typeof v === "number") return v;
+  if (typeof v === "string") {
+    const n = Number(v.replace(/,/g, ""));
+    return Number.isFinite(n) ? n : null;
+  }
+  return null;
+}
+
+function parseText(v) {
+  if (v == null) return null;
+  return String(v).trim() || null;
+}
+
+function parseBool(v) {
+  if (v === 1 || v === "1" || v === true) return true;
+  if (v === 0 || v === "0" || v === false) return false;
+  return null;
+}
+
+function calculatePriceConfidence({
+  hasRealtime,
+  hasDelayed,
+  hasBidAsk,
+  spreadPct,
+  volume,
+  isOTC,
+  otcPump,
+  snapshotUnreliable,
+}) {
+  let score = 0;
+  const reasons = [];
+
+  if (hasRealtime) score += 40;
+  else if (hasDelayed) {
+    score += 20;
+    reasons.push("delayed_data");
+  } else {
+    reasons.push("no_market_data");
+  }
+
+  if (hasBidAsk) score += 25;
+  else reasons.push("no_bid_ask");
+
+  if (spreadPct != null) {
+    if (spreadPct <= 0.5) score += 20;
+    else if (spreadPct <= 1) score += 15;
+    else if (spreadPct <= 3) score += 5;
+    else reasons.push("wide_spread");
+  } else {
+    reasons.push("no_spread");
+  }
+
+  if (volume != null && volume > 0) {
+    score += Math.min(10, Math.log10(volume + 1) * 2);
+  } else {
+    reasons.push("no_volume");
+  }
+
+  if (isOTC) {
+    score -= 20;
+    reasons.push("otc");
+  }
+
+  if (otcPump) {
+    score -= 25;
+    reasons.push("otc_pump_risk");
+  }
+
+  if (snapshotUnreliable) {
+    score -= 15;
+    reasons.push("snapshot_unreliable");
+  }
+
+  score = Math.max(0, Math.min(100, Math.round(score)));
+
+  return {
+    score,
+    level:
+      score >= 85 ? "high" :
+      score >= 60 ? "medium" :
+      score >= 40 ? "low" : "very_low",
+    reasons,
+  };
+}
+
 
 // export const getMarketSnapshotData = (conid) => {
 //   try {
@@ -82,10 +169,12 @@ export async function fetchMarketSnapshot(conid) {
     `/iserver/marketdata/snapshot?conids=${conid}&fields=${SNAPSHOT_FIELDS}`
   );
 
-  const raw =
+  const rawResponse =
     Array.isArray(response) ? response[0] :
     typeof response === "object" ? response :
     null;
+    
+    const raw = rawResponse?.data[0]
 
   if (!raw) throw new Error("IBKR snapshot empty");
 
@@ -131,8 +220,8 @@ export async function buildContractSummaryFromScanner(row) {
     const fallbackSymbol = row.symbol ?? null;
     const snap = await fetchMarketSnapshot(conid);
   
-    // console.log(snap?.noEntitlement, "snapshot data fetched");
-    
+    // console.log(snap, "snapshot data fetched");
+
     const raw = snap.raw;
   
     /* ---------- No entitlement ---------- */
@@ -170,7 +259,7 @@ export async function buildContractSummaryFromScanner(row) {
       };
     }
 
-    console.log(snap, "snap data");
+    // console.log(snap, "snap data");
     
     const flags = snap.flags;
   

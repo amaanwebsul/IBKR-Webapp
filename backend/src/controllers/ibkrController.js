@@ -2,6 +2,7 @@ import ibkrApi from "../services/ibkrService.js";
 import fs from 'fs';
 import path from "path";
 import fsPromises from "fs/promises";
+import { fetchMarketSnapshot } from "../services/ibkrContractSummary.js";
 
 const CACHE_FILE = path.resolve("runtime", "ibkr_data.json");
 
@@ -622,6 +623,21 @@ export async function getCachedIBKRMarkets(req, res) {
     return res.status(500).json({
       success: false,
       error: err.message || "Failed to load IBKR cache",
+    });
+  }
+}
+
+export const getIBKRMarketSnapshot = async (req, res) => {
+  try {
+    const response = await fetchMarketSnapshot(req.params.conid);
+    // console.log(response, "response from fetchMarketSnapshot");
+    
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      success: false,
+      error: error.message || "Something went wrong!",
     });
   }
 }
